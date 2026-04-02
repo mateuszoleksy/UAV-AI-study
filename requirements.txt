@@ -1,0 +1,31 @@
+# Core scientific stack
+numpy>=1.24
+scipy>=1.11
+
+# Deep learning
+torch>=2.1
+torchvision>=0.16
+
+# Reinforcement learning
+gymnasium>=0.29
+
+# Computer vision
+opencv-python>=4.8
+
+# Data handling
+pandas>=2.1
+h5py>=3.10
+
+# Visualization
+matplotlib>=3.8
+seaborn>=0.13
+
+# Configuration management
+pyyaml>=6.0
+omegaconf>=2.3
+
+# Testing
+pytest>=7.4
+
+# Jupyter
+jupyterlab>=4.0
