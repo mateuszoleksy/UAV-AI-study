@@ -20,7 +20,7 @@ Data Acquisition: Collecting 20-50 high-quality .ulg flight logs from review.px4
 
 Preprocessing: Extracting and synchronizing vehicle_local_position and actuator_motors tables.
 
-Model Training: Building a neural network regressor where:
+Model Training: Building a neural network regressor to predict control decisions from position and velocity data.
 
 Simulation: Integrating the model into the gym-pybullet-drones environment.
 
