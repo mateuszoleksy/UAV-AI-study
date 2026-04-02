@@ -37,10 +37,7 @@ Inference Time: AI decision-making speed.
 
 Tech Stack
 
- - Language: Python 3.10.
-
- - Simulator: gym-pybullet-drones.
-
- - AI/ML: PyTorch (MLP) or scikit-learn (Random Forest).
-
+- Language: Python 3.10.
+- Simulator: gym-pybullet-drones.
+- AI/ML: PyTorch (MLP) or scikit-learn (Random Forest).
 - Analysis: pandas, pyulog, matplotlib
