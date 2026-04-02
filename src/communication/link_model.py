@@ -25,7 +25,9 @@ class LinkParameters:
             raise ValueError("frequency_hz must be a finite value greater than 0")
     def free_space_path_loss_db(self, distance_m: float) -> float:
         """Compute free-space path loss (Friis) in dB."""
-        if distance_m <= 0:
+        if distance_m < 0:
+            raise ValueError("distance_m must be non-negative")
+        if distance_m == 0:
             return 0.0
         wavelength = 3e8 / self.frequency_hz
         return 20 * math.log10(4 * math.pi * distance_m / wavelength)
