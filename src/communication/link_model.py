@@ -19,6 +19,10 @@ class LinkParameters:
     tx_power_dbm: float = 20.0     # transmit power [dBm]
     rx_sensitivity_dbm: float = -90.0  # receiver sensitivity [dBm]
 
+    def __post_init__(self) -> None:
+        """Validate link parameters."""
+        if not math.isfinite(self.frequency_hz) or self.frequency_hz <= 0:
+            raise ValueError("frequency_hz must be a finite value greater than 0")
     def free_space_path_loss_db(self, distance_m: float) -> float:
         """Compute free-space path loss (Friis) in dB."""
         if distance_m <= 0:
