@@ -3,7 +3,6 @@
 import math
 
 import numpy as np
-import pytest
 
 from src.navigation.path_planning import Path, Waypoint
 
