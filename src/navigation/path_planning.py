@@ -1,8 +1,8 @@
 """
-Path planning utilities for UAV navigation.
+Path planning data structures for UAV navigation.
 
-Provides algorithms for computing collision-free paths in 2D/3D environments,
-including A*, RRT, and RL-based planners.
+Defines waypoint and path containers, along with basic path utility methods
+such as conversion to arrays and total path length calculation.
 """
 
 from __future__ import annotations
