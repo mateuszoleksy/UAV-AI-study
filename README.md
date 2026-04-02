@@ -28,11 +28,8 @@ The goal of this project is to investigate the resilience of AI-based autonomous
 
 ### Performance Metrics
 - MSE (Mean Squared Error): Average deviation from the planned trajectory.
-
 - Jitter: Control "nervousness" based on motor RPM changes.
-
 - Success Rate: Percentage of collision-free missions reaching the target.
-
 - Inference Time: AI decision-making speed.
 
 ### Tech Stack
