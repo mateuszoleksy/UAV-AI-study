@@ -1,7 +1,5 @@
 """Basic tests for the communication module."""
 
-import pytest
-
 from src.communication.link_model import LinkParameters
 
 
