@@ -1,40 +1,51 @@
 # UAV-AI-study
-Repository for project AI for drones: navigation and communication
 
-## AI for Drones: Communication & Navigation Resilience
-### Project Overview
+Research framework for **AI-driven UAV (drone) navigation and communication**.
 
-The goal of this project is to investigate the resilience of AI-based autonomous drone navigation systems against communication channel disturbances. Unlike traditional PID control, this system utilizes Behavior Cloning (BC) to mimic expert pilot behavior.
+## Overview
 
-### Key Research Areas
-- Behavior Cloning: Mapping position and velocity data to control decisions such as thrust, roll, pitch, and yaw.
+This repository contains research code, experiments, and datasets for studying:
 
-- Latency Impact: Analyzing how data transfer delays between sensors and the AI "brain" cause oscillations.
+- **Autonomous navigation** – path planning, obstacle avoidance, reinforcement learning-based control
+- **Communication** – inter-drone and ground-station communication protocols, link reliability, signal processing
+- **Perception** – sensor fusion, computer vision, localization
 
-- Signal Noise: Modeling signal degradation using real-world RSSI and Noise parameters from PX4 logs.
+## Repository Structure
 
-- Uncertainty Navigation: Testing if AI trained on "clean" data can recover during sudden connection loss.
+```
+UAV-AI-study/
+├── src/
+│   ├── navigation/       # Navigation algorithms and controllers
+│   ├── communication/    # Communication modules
+│   └── perception/       # Perception and sensor fusion
+├── experiments/          # Experiment scripts and configurations
+├── data/                 # Datasets (raw and processed)
+├── docs/                 # Documentation and research notes
+├── tests/                # Unit and integration tests
+└── notebooks/            # Jupyter notebooks for exploration
+```
 
-### Methodology
-- Data Acquisition: Collecting 20-50 high-quality .ulg flight logs from review.px4.io.
+## Getting Started
 
-- Preprocessing: Extracting and synchronizing vehicle_local_position and actuator_motors tables.
+### Prerequisites
 
-- Model Training: Building a neural network regressor to predict control decisions from position and velocity data.
+- Python 3.10+
+- pip
 
-- Simulation: Integrating the model into the gym-pybullet-drones environment.
+### Installation
 
-- Stress Testing: Running flights with artificial noise and latencies ranging from 50 ms to 500 ms.
+```bash
+git clone https://github.com/mateuszoleksy/UAV-AI-study.git
+cd UAV-AI-study
+pip install -r requirements.txt
+```
 
-### Performance Metrics
-- MSE (Mean Squared Error): Average deviation from the planned trajectory.
-- Jitter: Control "nervousness" based on motor RPM changes.
-- Success Rate: Percentage of collision-free missions reaching the target.
-- Inference Time: AI decision-making speed.
+### Running Tests
 
-### Tech Stack
+```bash
+python -m pytest tests/
+```
 
-- Language: Python 3.10.
-- Simulator: gym-pybullet-drones.
-- AI/ML: PyTorch (MLP) or scikit-learn (Random Forest).
-- Analysis: pandas, pyulog, matplotlib
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
