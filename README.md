@@ -49,5 +49,5 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 
 ## Dataset
 
-Project utilizes the dataset from https://logs.px4.io/ under license https://creativecommons.org/licenses/by/4.0/.
+The project uses flight logs from [logs.px4.io](https://logs.px4.io/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 Download and extract do data folder.
