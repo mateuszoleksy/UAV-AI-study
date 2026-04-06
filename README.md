@@ -6,7 +6,6 @@ Research framework for **AI-driven UAV (drone) navigation and communication**.
 
 This repository contains research code, experiments, and datasets for studying:
 
-- **Autonomous navigation** – path planning, obstacle avoidance, reinforcement learning-based control
 - **Communication** – inter-drone and ground-station communication protocols, link reliability, signal processing
 - **Perception** – sensor fusion, computer vision, localization
 
@@ -15,7 +14,6 @@ This repository contains research code, experiments, and datasets for studying:
 ```
 UAV-AI-study/
 ├── src/
-│   ├── navigation/       # Navigation algorithms and controllers
 │   ├── communication/    # Communication modules
 │   └── perception/       # Perception and sensor fusion
 ├── experiments/          # Experiment scripts and configurations
