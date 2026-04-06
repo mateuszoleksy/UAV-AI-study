@@ -46,3 +46,8 @@ python -m pytest tests/
 ## License
 
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+## Dataset
+
+The project uses flight logs from [logs.px4.io](https://logs.px4.io/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Create a `./data/` directory in the repository root if it does not already exist, then download and extract the dataset into that folder.
