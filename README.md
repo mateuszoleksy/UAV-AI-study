@@ -14,7 +14,7 @@ This repository contains research code, experiments, and datasets for studying:
 ```
 UAV-AI-study/
 ├── src/
-│   ├── communication/    # Communication modules
+│   ├── navigation/       # Navigation modules
 │   └── perception/       # Perception and sensor fusion
 ├── experiments/          # Experiment scripts and configurations
 ├── data/                 # Datasets (raw and processed)
