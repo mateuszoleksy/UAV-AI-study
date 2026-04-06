@@ -46,3 +46,8 @@ python -m pytest tests/
 ## License
 
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+## Dataset
+
+Project utilizes the dataset from https://logs.px4.io/ under license https://creativecommons.org/licenses/by/4.0/.
+Download and extract do data folder.
