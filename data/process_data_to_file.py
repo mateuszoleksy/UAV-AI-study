@@ -1,10 +1,8 @@
-import os
 import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler, LabelEncoder
-from configuration import *
+from configuration import configuration
 
-dataset = pd.read_csv(configuration.get_filepath_to_save())
 
 def advanced_processing(df):
     while True:
@@ -59,5 +57,13 @@ def advanced_processing(df):
         elif choice == 'Q':
             return df
 
-advanced_processing(dataset).to_csv(configuration.get_filepath_to_output(), index=False)
-print("Saved output data to: ", configuration.get_filepath_to_output())
+
+def main():
+    dataset = pd.read_csv(configuration.get_filepath_to_save())
+    result = advanced_processing(dataset)
+    result.to_csv(configuration.get_filepath_to_output(), index=False)
+    print("Saved output data to: ", configuration.get_filepath_to_output())
+
+
+if __name__ == "__main__":
+    main()
