@@ -2,11 +2,7 @@
 # Extract your desired columns for file
 
 import pandas as pd
-import os
-from configuration import *
-
-## load path for joining absolute path
-current_filepath = os.getcwd()
+from configuration import configuration
 
 dataset = pd.read_csv(configuration.get_filepath_to_extract())
 dataset_final = pd.DataFrame(dataset, columns=configuration.get_columns_to_extract())

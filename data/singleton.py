@@ -1,5 +1,3 @@
-import os
-
 class Singleton:
     _instance = None
 
