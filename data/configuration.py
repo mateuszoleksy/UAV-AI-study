@@ -7,7 +7,7 @@ class Configuration(Singleton):
         if self._initialized:
             return
 
-        self.absolute_path = os.getcwd()
+        self.data_dir = os.path.dirname(os.path.abspath(__file__))
         self._filename = filename
         self._columns_to_extract = columns
 
@@ -19,9 +19,9 @@ class Configuration(Singleton):
 
     def set_filepath(self, new_filename):
         self._filename = new_filename
-        self._filepath_to_output = os.path.join(self.absolute_path, 'output', self._filename)
-        self._filepath_to_save = os.path.join(self.absolute_path, 'processed', self._filename)
-        self._filepath_to_extract = os.path.join(self.absolute_path, 'raw', self._filename)
+        self._filepath_to_output = os.path.join(self.data_dir, 'output', self._filename)
+        self._filepath_to_save = os.path.join(self.data_dir, 'processed', self._filename)
+        self._filepath_to_extract = os.path.join(self.data_dir, 'raw', self._filename)
 
     def get_filepath_to_extract(self):
         return self._filepath_to_extract
