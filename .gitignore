@@ -22,7 +22,7 @@ ENV/
 
 # Data files
 data/raw/
-data/processed/
+data/processedc
 *.csv
 *.h5
 *.pkl
